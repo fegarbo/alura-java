@@ -4,7 +4,7 @@ import br.com.bytebank.banco.modelo.ContaCorrente;
 import br.com.bytebank.banco.modelo.ContaPoupanca;
 import br.com.bytebank.banco.modelo.SaldoInsuficienteException;
 
-public class TesteContas {
+public class TesteObject {
 
 	public static void main(String[] args) throws SaldoInsuficienteException{
 		//int a = 3;
