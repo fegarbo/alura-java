@@ -15,7 +15,7 @@ public class TesteArrayReferencias {
         contas[0] = cc1;
         contas[1] = cp2;
         // alterou o tipo, realizando o cast
-        ContaCorrente ref = (ContaCorrente)contas[1];
+        ContaCorrente ref = (ContaCorrente)contas[0];
         
         System.out.println(contas[1].getNumero());
         System.out.println(cp2.getNumero());
