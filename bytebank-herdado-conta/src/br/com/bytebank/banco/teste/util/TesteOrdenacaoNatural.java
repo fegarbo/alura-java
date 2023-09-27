@@ -10,7 +10,7 @@ import br.com.bytebank.banco.modelo.Conta;
 import br.com.bytebank.banco.modelo.ContaCorrente;
 import br.com.bytebank.banco.modelo.ContaPoupanca;
 
-public class TesteOrdenacaoNome {
+public class TesteOrdenacaoNatural {
 
 	public static void main(String[] args) {
 		Conta cc1 = new ContaCorrente(22, 33);
@@ -43,25 +43,12 @@ public class TesteOrdenacaoNome {
 		lista.add(cc3);
 		lista.add(cc4);
 		
-		//lista.sort(new TitularContaComparator());
-		Collections.sort(lista, new TitularContaComparator()); //Alternativa para o sort
+		//lista.sort(null);
+		Collections.sort(lista); //Utilizando ordenacao natural (implementado Comparable na Classe conta e método compareTo)
 		
 		for (Conta conta : lista) {
-			System.out.println(conta  + ", " + conta.getTitular().getNome());
+			System.out.println(conta  + ", " + conta.getSaldo());
 		}
 	}
 
-}
-
-class TitularContaComparator implements Comparator<Conta>{
-
-	@Override
-	public int compare(Conta c1, Conta c2) {
-		String nomeC1 = c1.getTitular().getNome();
-		String nomeC2 = c2.getTitular().getNome();
-		
-		return nomeC1.compareTo(nomeC2);
-
-	}
-	
 }
